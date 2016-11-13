@@ -6,8 +6,8 @@ async function getId (ctx, next) {
 }
 
 async function list (ctx, next) {
-    ctx.body = await myDb.getAll();
-    await next();
+	ctx.body = await myDb.getAll();
+	await next();
 }
 
 async function createItem (ctx, next) {
@@ -25,6 +25,6 @@ async function removeItem (ctx, next) {
     await myDb.removeId(ctx.params.id);
     ctx.status = 204;
     await next();
-}
 
+}
 export {getId, list, createItem, updateItem, removeItem};

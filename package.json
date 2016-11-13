@@ -16,13 +16,14 @@
   "bugs": {
     "url": "https://github.com/supperbowen/bw-wechat-mgr/issues"
   },
-  "homepage": "https://github.com/supperbowen/bw-wechat-mgr#readme",  
+  "homepage": "https://github.com/supperbowen/bw-wechat-mgr#readme",
   "directories": {
     "lib": "./app/controllers",
     "test": "./test"
   },
   "dependencies": {
     "amqplib": "*",
+    "babel-cli": "^6.18.0",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.14.0",
@@ -36,6 +37,7 @@
     "koa-router": ">=7.x.x"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
     "jasmine-node": "*",
     "optimist": "*"
   },
