@@ -1,0 +1,45 @@
+{
+  "name": "bw-wechat-mgr",
+  "version": "1.0.0",
+  "description": "for a wechat manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony index.js",
+    "test": "node --harmony ./node_modules/jasmine-node/lib/jasmine-node/cli.js spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supperbowen/bw-wechat-mgr.git"
+  },
+  "author": "梁灿伦（BOWEN LIANG）",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supperbowen/bw-wechat-mgr/issues"
+  },
+  "homepage": "https://github.com/supperbowen/bw-wechat-mgr#readme",  
+  "directories": {
+    "lib": "./app/controllers",
+    "test": "./test"
+  },
+  "dependencies": {
+    "amqplib": "*",
+    "babel-preset-es2015-node6": "^0.3.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
+    "co": "*",
+    "config": "*",
+    "koa": ">=2.x",
+    "koa-body": "*",
+    "koa-bodyparser": "*",
+    "koa-convert": "*",
+    "koa-render": "*",
+    "koa-router": ">=7.x.x"
+  },
+  "devDependencies": {
+    "jasmine-node": "*",
+    "optimist": "*"
+  },
+  "engines": {
+    "node": ">=6.0.x"
+  }
+}
