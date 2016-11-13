@@ -27,4 +27,10 @@ async function removeItem (ctx, next) {
     await next();
 
 }
-export {getId, list, createItem, updateItem, removeItem};
+
+async  function getFilterd(ctx, next) {
+	ctx.body = await  myDb.getFiltered();
+	await next();
+}
+
+export {getId, list, createItem, updateItem, removeItem, getFilterd};

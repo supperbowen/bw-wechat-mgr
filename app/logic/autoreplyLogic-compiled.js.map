@@ -1,0 +1,1 @@
+{"version":3,"sources":["autoreplyLogic.js"],"names":[],"mappings":";;;;;;AAAA;;;;;;;;;;;;IACqB,c;;;AACpB,2BAAa;AAAA;;AAAA,yHACN,WADM;AAEZ;;;;;kBAHmB,c","file":"autoreplyLogic-compiled.js","sourcesContent":["import baseLogic from './baseLogic'\r\nexport default class autoReplyLogic extends baseLogic{\r\n\tconstructor(){\r\n\t\tsuper('autoreply');\r\n\t}\r\n\r\n}"]}

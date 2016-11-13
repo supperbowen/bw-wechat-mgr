@@ -21,6 +21,14 @@ module.exports = {
         });
     },
 
+    getFiltered:function getFilteredFromDb(filter) {
+      return new Promise((resolve, reject)=>{
+          setTimeout(()=>{
+             resolve(db||[]);
+          }, fakeDelay);
+        });
+    },
+
     /**
      * Get record by id from memory DB
      * @param id
