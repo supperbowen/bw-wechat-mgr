@@ -4,7 +4,7 @@ module.exports = {
         version: '2.1.0'
     },
     server: {
-        port: 8081
+        port: 80
     },
     worker: process.env.NODE_WORKER_NAME,
     rabbitMq: {
