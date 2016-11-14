@@ -1,10 +1,10 @@
 module.exports = {
     app: {
-        name: 'myKoajsRestApp',
+        name: 'bw-wechat-mgr',
         version: '2.1.0'
     },
     server: {
-        port: 80
+        port: 8080
     },
     worker: process.env.NODE_WORKER_NAME,
     rabbitMq: {
