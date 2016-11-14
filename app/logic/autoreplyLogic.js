@@ -1,11 +1,8 @@
-import baseLogic from './baseLogic'
-export default class autoReplyLogic extends baseLogic{
+let {baseLogic} = require('./baseLogic');
+class autoReplyLogic extends baseLogic{
 	constructor(){
 		super('autoreply');
-
 	}
-	getList(){
-		return super.getList.apply(this, arguments);
-	};
-
 }
+
+export {autoReplyLogic};

@@ -5,12 +5,12 @@ const db = [
 	],
 	fakeDelay=100;
 
-export default class baseLogic{
+class baseLogic{
 	constructor(schema){
 		this.schema = schema;
 	}
 	getList(filter, pageCount, pageNum){
-		return new Promise((reolsve, reject)=>{
+		return new Promise((resolve, reject)=>{
 			setTimeout(function () {
 				resolve(db);
 			},fakeDelay);
@@ -37,3 +37,5 @@ export default class baseLogic{
 
 	}
 }
+
+export {baseLogic};

@@ -21,7 +21,7 @@ var baseLogic = function () {
 	_createClass(baseLogic, [{
 		key: "getList",
 		value: function getList(filter, pageCount, pageNum) {
-			return new Promise(function (reolsve, reject) {
+			return new Promise(function (resolve, reject) {
 				setTimeout(function () {
 					resolve(db);
 				}, fakeDelay);
@@ -47,6 +47,6 @@ var baseLogic = function () {
 	return baseLogic;
 }();
 
-exports.default = baseLogic;
+exports.baseLogic = baseLogic;
 
 //# sourceMappingURL=baseLogic-compiled.js.map

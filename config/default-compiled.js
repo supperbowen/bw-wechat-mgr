@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     app: {
         name: 'bw-wechat-mgr',
@@ -10,9 +12,11 @@ module.exports = {
     rabbitMq: {
         host: "127.0.0.1",
         port: 5672,
-        options: {durable: true},
+        options: { durable: true },
         queue: process.env.NODE_QUEUE_NAME,
         user: "myuser",
         password: "mypass"
     }
 };
+
+//# sourceMappingURL=default-compiled.js.map
