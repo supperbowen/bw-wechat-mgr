@@ -16,18 +16,17 @@ var baseLogic = function () {
 		_classCallCheck(this, baseLogic);
 
 		this.schema = schema;
-	}
 
-	_createClass(baseLogic, [{
-		key: "getList",
-		value: function getList(filter, pageCount, pageNum) {
+		this.getList = function (filter, pageCount, pageNum) {
 			return new Promise(function (resolve, reject) {
 				setTimeout(function () {
 					resolve(db);
 				}, fakeDelay);
 			});
-		}
-	}, {
+		};
+	}
+
+	_createClass(baseLogic, [{
 		key: "getItem",
 		value: function getItem(id) {}
 	}, {

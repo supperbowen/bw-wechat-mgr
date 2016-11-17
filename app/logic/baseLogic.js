@@ -1,39 +1,40 @@
 const db = [
-		{id:0, name: "test0" },
-		{id:1, name: "test1" },
-		{id:2, name: "test2" }
+		{id: 0, name: "test0"},
+		{id: 1, name: "test1"},
+		{id: 2, name: "test2"}
 	],
-	fakeDelay=100;
+	fakeDelay = 100;
 
-class baseLogic{
-	constructor(schema){
+class baseLogic {
+	constructor(schema) {
 		this.schema = schema;
-	}
-	getList(filter, pageCount, pageNum){
-		return new Promise((resolve, reject)=>{
-			setTimeout(function () {
-				resolve(db);
-			},fakeDelay);
-		})
-	}
 
-	getItem(id){
-
+		this.getList = function (filter, pageCount, pageNum) {
+			return new Promise((resolve, reject)=>{
+				setTimeout(function () {
+					resolve(db);
+				},fakeDelay);
+			})
+		}
 	}
 
-	removeItem(id){
+	getItem(id) {
 
 	}
 
-	removeItems(ids){
+	removeItem(id) {
 
 	}
 
-	createItem(){
+	removeItems(ids) {
 
 	}
 
-	updateItem(){
+	createItem() {
+
+	}
+
+	updateItem() {
 
 	}
 }
