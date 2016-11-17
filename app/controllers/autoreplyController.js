@@ -6,7 +6,12 @@ async function list(ctx, next) {
 	await next();
 }
 
-export{list}
+async function create(ctx, next) {
+	ctx.body = await logic.createItem();
+	await next();
+}
+
+export{list,create}
 
 
 

@@ -1,21 +1,25 @@
-const db = [
-		{id: 0, name: "test0"},
-		{id: 1, name: "test1"},
-		{id: 2, name: "test2"}
-	],
-	fakeDelay = 100;
+var mongoose = require('mongoose'),
+	dbuser = 'liangcanl',
+	dbpsw = '11223344**!!abc',
+	connectStr = `mongodb://${dbuser}:${dbpsw}@ds155097.mlab.com:55097/bw-wechat-mgr`;
+
 
 class baseLogic {
 	constructor(schema) {
 		this.schema = schema;
+		this.Model = this.context = mongoose.model('autoreply', this.schema);
+		mongoose.connect(connectStr);
+	}
 
-		this.getList = function (filter, pageCount, pageNum) {
-			return new Promise((resolve, reject)=>{
-				setTimeout(function () {
-					resolve(db);
-				},fakeDelay);
-			})
-		}
+	getList(filter, pageCount, pageNum) {
+		return new Promise((resolve, reject)=> {
+			this.context.find(function (err, items) {
+				if (err) {
+					console.error(err);
+				}
+				resolve(items);
+			});
+		});
 	}
 
 	getItem(id) {
@@ -31,7 +35,20 @@ class baseLogic {
 	}
 
 	createItem() {
-
+		var autoreply = new this.Model({
+			name:'bowen',
+			message:'hello world',
+			version:0,
+			age:18
+		});
+		return new Promise((resolve)=>{
+			autoreply.save((err, item)=>{
+				if (err) {
+					console.error(err);
+				}
+				resolve(item);
+			});
+		});
 	}
 
 	updateItem() {
